@@ -1,12 +1,12 @@
 import React from 'react';
-import ApartmentTable from "@/app/dashboard/_components/apartment_table";
-import {BarChartHero} from "@/app/dashboard/_components/bar_chart";
+import ApartmentTableOverview from "@/app/dashboard/_components/table/apartment_table";
+import {BarChartHero} from "@/app/dashboard/_components/chart/bar_chart";
 
 const Page = () => {
     return (
         <div className='flex space-x-12'>
             <div className='flex flex-col flex-[35%]' >
-                <ApartmentTable/>
+                <ApartmentTableOverview/>
             </div>
             <div className='flex flex-col flex-[30%]'>
                 <BarChartHero/>
