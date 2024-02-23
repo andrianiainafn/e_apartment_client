@@ -1,9 +1,14 @@
 import React from 'react';
-import ButtonDelete from "@/app/dashboard/_components/button_delete";
-import ButtonEdit from "@/app/dashboard/_components/button_edit";
+import ButtonDelete from "@/app/dashboard/_components/button/button_delete";
+import ButtonEdit from "@/app/dashboard/_components/button/button_edit";
 
+interface Props{
+    design:string
+    numApp:string
+    rent:number
 
-const ApartmentRow = () => {
+}
+const ApartmentRow = (props:Props) => {
     return (
         <tr className='text-center h-[6vh] '>
             <td className='' >
@@ -21,7 +26,7 @@ const ApartmentRow = () => {
                 </div>
             </td>
             <td className=''>
-               <div className='flex space-x-2'>
+               <div className='flex space-x-2 justify-center'>
                    <ButtonEdit/>
                    <ButtonDelete/>
                </div>
