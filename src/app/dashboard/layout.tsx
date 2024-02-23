@@ -1,14 +1,18 @@
 import React, {PropsWithChildren} from 'react';
 import Navigation from "@/app/dashboard/_components/navigation";
+import TopBar from "@/app/dashboard/_components/top_bar";
 
 function DashboardLayout({children} :PropsWithChildren) {
     return (
-        <main className='bg-white flex h-screen'>
+        <main className='bg-[#fefefe] flex h-screen'>
             <aside className='flex flex-[5%] flex-col bg-[#EAD9CC]'>
                 <Navigation/>
             </aside>
-            <div className='flex flex-[95%]'>
-                {children}
+            <div className='flex flex-col flex-[95%] p-5'>
+                <TopBar/>
+                <div className=''>
+                    {children}
+                </div>
             </div>
         </main>
     );
