@@ -9,8 +9,8 @@ export const  useCreateApartment = () => {
             mutationKey:['create'],
             mutationFn:(apartment: Partial<IApartment>)=> apartmentService.createApartment(apartment),
             onSuccess: async ()=>{
-                await queryClient.invalidateQueries([''])
-                await queryClient.resetQueries([''])
+                await queryClient.invalidateQueries(['apartments'])
+                await queryClient.resetQueries(['apartments'])
             }
         }
     )

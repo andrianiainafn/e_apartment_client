@@ -4,7 +4,7 @@ import {IApartment} from "@/app/dashboard/apartment/_constant/type";
 
 class ApartmentService{
     public getApartmentById(apartmentId:string){
-        return httpClient.get(`${apartmentId}/${APARTMENT_ENDPOINT.GET_ALL}`)
+        return httpClient.get(`apartments/${apartmentId}`)
     }
     public getAllApartment(){
         return httpClient.get(APARTMENT_ENDPOINT.GET_ALL)
@@ -13,7 +13,7 @@ class ApartmentService{
         return httpClient.post(APARTMENT_ENDPOINT.CREATE,apartment)
     }
     public editApartment(apartment:Partial<IApartment>,apartmentId:string){
-        return httpClient.put(`${apartmentId}/${APARTMENT_ENDPOINT.UPDATE}`,apartment)
+        return httpClient.put(`apartments/${apartmentId}`,apartment)
     }
     public deleteApartmentById(apartmentId:string){
         return httpClient.delete(`${apartmentId}/${APARTMENT_ENDPOINT.DELETE_BY_ID}`)

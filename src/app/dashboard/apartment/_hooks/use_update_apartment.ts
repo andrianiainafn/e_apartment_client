@@ -6,13 +6,9 @@ export const useUpdateApartment = (apartmentId:string) =>{
     const queryClient = useQueryClient()
     return useMutation({
         mutationFn: (apartment: Partial<IApartment>) => apartmentService.editApartment(apartment, apartmentId),
-        onSuccess: async () => {
-            await queryClient.invalidateQueries({
-                predicate: (query) => {
-                    console.log(query.queryKey);
-                    return query.queryKey[0] === "apartment"
-                }
-            })
+        onSuccess:async ()=>{
+            await queryClient.invalidateQueries(['apartments'])
+            await queryClient.resetQueries(['apartments'])
         }
     })
 }

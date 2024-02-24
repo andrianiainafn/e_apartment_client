@@ -13,7 +13,7 @@ const CreateApartmentModal = (props :Props) => {
                         <MdOutlineClose className='text-xl'/>
                     </button>
                 </div>
-                <h3 className='text-xl font-semibold '>Create Task</h3>
+                <h3 className='text-xl font-semibold '>Create Apartment</h3>
                 <CreateApartmentForm HandleClick={props.HandleClick}/>
             </div>
         </div>

@@ -37,7 +37,7 @@ const CreateApartmentForm = (props:Props) => {
                 {errors.rent && <span className='text-red-600'> This field is required</span>}
             </div>
             <button type='submit' className='bg-[#D3A286] w-full text-white py-3'>
-                Create task
+                Create Apartment
             </button>
             <button type='reset' onClick={props.HandleClick}  className='bg-[#F2F2F2] w-full text-[#0F172A] py-3'>
                 Cancel
