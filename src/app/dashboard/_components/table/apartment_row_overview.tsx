@@ -6,9 +6,6 @@ import ButtonEdit from "@/app/dashboard/_components/button/button_edit";
 const ApartmentRowOverview = () => {
     return (
         <tr className='text-center h-[6vh] '>
-            <td className='' >
-                12
-            </td>
             <td>
                 Test design
             </td>
