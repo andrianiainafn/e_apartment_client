@@ -11,6 +11,8 @@ export const  useCreateApartment = () => {
             onSuccess: async ()=>{
                 await queryClient.invalidateQueries(['apartments'])
                 await queryClient.resetQueries(['apartments'])
+                await queryClient.resetQueries(["apartment","stat"])
+                await queryClient.resetQueries(["apartment","recent"])
             }
         }
     )

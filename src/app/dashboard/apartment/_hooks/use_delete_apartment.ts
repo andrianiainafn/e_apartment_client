@@ -23,6 +23,8 @@ export const useDeleteApartment = () =>{
             onSuccess: async () =>{
                 await queryClient.invalidateQueries(["apartments",])
                 await queryClient.resetQueries(["apartments"])
+                await queryClient.resetQueries(['apartment','stat'])
+                await queryClient.resetQueries(["apartment","recent"])
             }
         }
     )
