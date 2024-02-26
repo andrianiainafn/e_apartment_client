@@ -7,20 +7,22 @@ import CreateApartmentModal from "@/app/dashboard/apartment/_components/modal/cr
 import {useFetchApartment} from "@/app/dashboard/apartment/_hooks/use_fetch_apartment";
 import {IApartment} from "@/app/dashboard/apartment/_constant/type";
 import {EditApartmentModal} from "@/app/dashboard/apartment/_components/modal/edit_apartment_modal";
+import DeleteApartmentModal from "@/app/dashboard/apartment/_components/modal/delete_apartment_modal";
 
 
 const ApartmentTable = () => {
     const [isCreate,setIsCreate] = useState(false)
     const{isSuccess,data} = useFetchApartment()
     const[isEdit,setIsEdit] = useState(false)
-    if(isSuccess){
-        console.log(data)
-    }
+    const[isDelete,setIsDelete] = useState(false)
     const HandleClick = ()=>{
         setIsCreate(ancien=>!ancien)
     }
     const HandleClickEdit = ()=>{
         setIsEdit(ancien=>!ancien)
+    }
+    const HandleClickDelete = ()=>{
+        setIsDelete(ancien=>!ancien)
     }
     return (
         <>
