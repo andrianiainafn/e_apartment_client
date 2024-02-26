@@ -16,14 +16,19 @@ class ApartmentService{
         return httpClient.put(`apartments/${apartmentId}`,apartment)
     }
     public deleteApartmentById(apartmentId:string){
-        return httpClient.delete(`${apartmentId}/${APARTMENT_ENDPOINT.DELETE_BY_ID}`)
+        return httpClient.delete(`apartments/${apartmentId}`)
     }
     public  deleteApartments(apartmentsId:string[]){
         const deleteApartmentRequest = apartmentsId.map(id =>{
-            return httpClient.delete(`${id}/${APARTMENT_ENDPOINT.DELETE_BY_ID}`)
+            return httpClient.delete(`apartments/${id}`)
         })
         return deleteApartmentRequest
     }
-
+    public getStatForChart(){
+        return httpClient.get('/stat/apartment')
+    }
+    public getRecentApartment(){
+        return httpClient.get('/apartments?size=4')
+    }
 }
 export const apartmentService = new ApartmentService()
