@@ -11,7 +11,7 @@ interface Props{
 }
 
 const ButtonEdit = (props:Props) => {
-    const {isSuccess,data} = useFetchApartmentDetails(props.numApp)
+    const {isSuccess,data,isError} = useFetchApartmentDetails(props.numApp)
     const updateDesign = useApartmentDetails((state)=>state.updateDesign)
     const updateNumApp = useApartmentDetails((state)=>state.updateNumApp)
     const updateRent = useApartmentDetails((state)=>state.updateRent)
