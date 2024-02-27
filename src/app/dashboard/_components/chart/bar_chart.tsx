@@ -16,7 +16,7 @@ export const BarChartHero = () => {
     useEffect(()=>{
         if (isSuccess){
             console.log(data.data)
-            setDataChart(prevState => [...prevState,
+            setDataChart(prevState => [
                 {
                     name:"minimal",
                     "Number of rent" :data.data.min
