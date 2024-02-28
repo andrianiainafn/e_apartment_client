@@ -13,7 +13,7 @@ const LinkButton = (props:Props) => {
     const {icon,href,label} = props
     const pathname = usePathname()
     return (
-        <div className={`flex flex-col items-center ${pathname == href ? "text-[#CE7951] text-white":""}`}>
+        <div className={`flex flex-col items-center ${pathname == href ? "text-[#CFA061] ":"text-white"}`}>
             {icon}
             <Link href={href} >{label}</Link>
         </div>
