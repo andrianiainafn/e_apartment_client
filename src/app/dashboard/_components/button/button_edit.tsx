@@ -24,7 +24,7 @@ const ButtonEdit = (props:Props) => {
         }
     }
     return (
-        <button onClick={HandleClickEdit} className=' border border-[#D3A286] text-[#D3A286] text-sm rounded-xl h-[4vh] w-[6vw] justify-center flex space-x-1 items-center' >
+        <button onClick={HandleClickEdit} className=' border border-[#CFA061] text-[#CFA061] text-sm rounded-xl h-[4vh] w-[6vw] justify-center flex space-x-1 items-center' >
             <p>Edit</p>
             <MdOutlineEdit className='text-xl'/>
         </button>

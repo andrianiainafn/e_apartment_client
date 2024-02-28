@@ -7,7 +7,7 @@ interface Props{
 }
 const AddApartment = (props:Props) => {
     return (
-        <button onClick={props.HandleClick} className=' border border-[#D3A286] text-[#D3A286] text-sm rounded-xl h-[6vh] w-[10vw] justify-center flex space-x-1 items-center' >
+        <button onClick={props.HandleClick} className=' border border-[#CFA061] text-[#CFA061] text-sm rounded-xl h-[6vh] w-[10vw] justify-center flex space-x-1 items-center' >
             <p>New apartment</p>
             <IoAddCircleOutline className='text-xl'/>
         </button>

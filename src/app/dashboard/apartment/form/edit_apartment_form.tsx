@@ -47,7 +47,7 @@ export const EditApartmentForm = (props:Props) => {
                        className='outline-none p-2 input ' {...register("rent",{required:true})} />
                 {errors.rent && <span className='text-red-600'> This field is required</span>}
             </div>
-            <button type='submit' className='bg-[#D3A286] w-full text-white py-3'>
+            <button type='submit' className='bg-[#CFA061] w-full text-white py-3'>
                 Edit Apartment
             </button>
             <button type='reset' onClick={props.HandleClick}  className='bg-[#F2F2F2] w-full text-[#0F172A] py-3'>

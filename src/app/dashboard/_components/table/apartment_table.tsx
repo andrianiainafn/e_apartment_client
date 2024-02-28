@@ -14,7 +14,7 @@ const ApartmentTableOverview = () => {
                 <h2 className='font-semibold text-lg'>
                     Apartment
                 </h2>
-                <Link href='/dashboard/apartment' className='text-[#D3A286] underline'>view all</Link>
+                <Link href='/dashboard/apartment' className='text-[#CFA061] underline'>view all</Link>
             </div>
             <table >
                 <ApartmentTableHeaderOverview/>
