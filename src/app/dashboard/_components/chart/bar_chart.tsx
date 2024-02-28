@@ -37,7 +37,7 @@ export const BarChartHero = () => {
             data={dataChart}
             index="name"
             categories={['Number of rent']}
-            colors={['red']}
+            colors={['amber-700']}
             yAxisWidth={48}
             onValueChange={(v) => console.log(v)}
         />
